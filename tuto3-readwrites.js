@@ -1,0 +1,5 @@
+const {readFileSync,writeFileSync} =require('fs')
+const first = readFileSync('./test/text.txt','utf8')
+const second = readFileSync('./test/text2.txt','utf8')
+console.log(first,second)
+writeFileSync('./test/result-sync.txt',` Here is the result: ${first} , ${second}`,{flag:'a'})
